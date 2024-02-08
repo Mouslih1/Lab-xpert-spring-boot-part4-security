@@ -9,6 +9,7 @@ import com.example.labxpert.Service.IUserService;
 import io.micrometer.core.instrument.util.StringUtils;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -23,12 +24,14 @@ public class UserServiceImpl implements IUserService {
 
     private final IUserRepository iUserRepository;
     private final ModelMapper modelMapper;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserDto add(UserDto userDto)
     {
         validation(userDto);
         checkExistEmail(userDto);
+        userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
         User user = iUserRepository.save(modelMapper.map(userDto, User.class));
         return modelMapper.map(user, UserDto.class);
     }
@@ -48,7 +51,7 @@ public class UserServiceImpl implements IUserService {
         userExist.setPrenom(userDto.getPrenom());
         userExist.setSexe(userDto.getSexe());
         userExist.setAddress(userDto.getAddress());
-        userExist.setPassword(userDto.getPassword());
+        userExist.setPassword(passwordEncoder.encode(userDto.getPassword()));
         userExist.setDateNaissance(userDto.getDateNaissance());
         userExist.setVille(userDto.getVille());
         userExist.setTel(userDto.getTel());
