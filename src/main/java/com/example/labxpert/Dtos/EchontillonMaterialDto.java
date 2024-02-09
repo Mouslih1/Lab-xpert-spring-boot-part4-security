@@ -1,6 +1,6 @@
 package com.example.labxpert.Dtos;
 
-import com.example.labxpert.Model.EchontillonMaterial;
+import com.example.labxpert.model.EchontillonMaterial;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 

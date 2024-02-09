@@ -1,14 +1,11 @@
 package com.example.labxpert.Dtos;
 
-import com.example.labxpert.Model.Analyse;
-import com.example.labxpert.Model.Enum.Role;
-import com.example.labxpert.Model.Enum.Sexe;
-import com.example.labxpert.Model.Planification;
-import com.example.labxpert.Model.User;
+import com.example.labxpert.model.Enum.Role;
+import com.example.labxpert.model.Enum.Sexe;
+import com.example.labxpert.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
-import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.validation.constraints.*;
 import java.io.Serializable;

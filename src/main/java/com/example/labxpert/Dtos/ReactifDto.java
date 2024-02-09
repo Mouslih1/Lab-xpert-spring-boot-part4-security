@@ -1,8 +1,6 @@
 package com.example.labxpert.Dtos;
 
-import com.example.labxpert.Dtos.FournisseurDto;
-import com.example.labxpert.Model.Fournisseur;
-import com.example.labxpert.Model.Reactif;
+import com.example.labxpert.model.Reactif;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;

@@ -1,7 +1,6 @@
 package com.example.labxpert.Dtos;
 
-import com.example.labxpert.Model.Analyse;
-import com.example.labxpert.Model.Echontillon;
+import com.example.labxpert.model.Echontillon;
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 import javax.validation.constraints.*;

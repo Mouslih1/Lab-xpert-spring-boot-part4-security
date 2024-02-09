@@ -1,9 +1,7 @@
 package com.example.labxpert.Dtos;
 
-import com.example.labxpert.Dtos.AnalyseDto;
-import com.example.labxpert.Dtos.ReactifDto;
-import com.example.labxpert.Model.Enum.StatusResult;
-import com.example.labxpert.Model.SousAnalyse;
+import com.example.labxpert.model.Enum.StatusResult;
+import com.example.labxpert.model.SousAnalyse;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;

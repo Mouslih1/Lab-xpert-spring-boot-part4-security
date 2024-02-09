@@ -1,8 +1,7 @@
 package com.example.labxpert.Dtos;
 
-import com.example.labxpert.Model.Echontillon;
-import com.example.labxpert.Model.Enum.Sexe;
-import com.example.labxpert.Model.Patient;
+import com.example.labxpert.model.Enum.Sexe;
+import com.example.labxpert.model.Patient;
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 import java.io.Serializable;

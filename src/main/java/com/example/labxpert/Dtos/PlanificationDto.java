@@ -1,8 +1,6 @@
 package com.example.labxpert.Dtos;
 
-import com.example.labxpert.Dtos.AnalyseDto;
-import com.example.labxpert.Dtos.UserDto;
-import com.example.labxpert.Model.Planification;
+import com.example.labxpert.model.Planification;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
