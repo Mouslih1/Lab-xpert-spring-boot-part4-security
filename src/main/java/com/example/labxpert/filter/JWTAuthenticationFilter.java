@@ -2,7 +2,7 @@ package com.example.labxpert.filter;
 
 import com.example.labxpert.helper.JWTHelper;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.annotations.ApiKeyAuthDefinition;
+//import io.swagger.annotations.ApiKeyAuthDefinition;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -28,7 +28,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException
     {
-        String email = request.getParameter("email");
+        String email = request.getParameter("username");
         String password = request.getParameter("password");
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(email, password);
 

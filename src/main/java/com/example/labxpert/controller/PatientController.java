@@ -21,7 +21,7 @@ public class PatientController {
     private final IPatientService iPatientService;
 
     @GetMapping
-    @PreAuthorize("hasAnyAuthority('Admin', 'Technicien', 'Responsable')")
+   // @PreAuthorize("hasAnyAuthority('Admin', 'Technicien', 'Responsable')")
     public ResponseEntity<List<PatientDto>> getAll()
     {
         return ResponseEntity.ok(iPatientService.getAll());
