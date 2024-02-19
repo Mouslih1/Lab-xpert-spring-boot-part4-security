@@ -16,6 +16,7 @@ import java.util.NoSuchElementException;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/v1/users")
+@CrossOrigin("*")
 public class UserController {
 
     private final IUserService iUserService;

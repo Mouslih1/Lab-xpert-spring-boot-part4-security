@@ -16,6 +16,7 @@ import java.util.NoSuchElementException;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/planifications")
+@CrossOrigin("*")
 public class PlanificationController {
 
     private final IPlanificationService iPlanificationService;

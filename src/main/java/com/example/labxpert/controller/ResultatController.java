@@ -16,6 +16,7 @@ import java.util.NoSuchElementException;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/results")
+@CrossOrigin("*")
 public class ResultatController {
 
     private final IResultService iResultService;

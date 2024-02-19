@@ -16,6 +16,7 @@ import java.util.NoSuchElementException;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/reactifs")
+@CrossOrigin("*")
 public class ReactifController {
 
     private final IReactifService iReactifService;

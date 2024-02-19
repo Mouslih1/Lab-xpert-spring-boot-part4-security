@@ -16,12 +16,13 @@ import java.util.NoSuchElementException;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/v1/patients")
+@CrossOrigin("*")
 public class PatientController {
 
     private final IPatientService iPatientService;
 
     @GetMapping
-   // @PreAuthorize("hasAnyAuthority('Admin', 'Technicien', 'Responsable')")
+    @PreAuthorize("hasAnyAuthority('Admin', 'Technicien', 'Responsable')")
     public ResponseEntity<List<PatientDto>> getAll()
     {
         return ResponseEntity.ok(iPatientService.getAll());
@@ -44,7 +45,7 @@ public class PatientController {
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasAnyAuthority('Admin', 'Technicien', 'Responsable')")
+    @PreAuthorize("hasAnyAuthority('Technicien', 'Responsable')")
     public ResponseEntity<PatientDto> getById(@PathVariable Long id)
     {
         try{

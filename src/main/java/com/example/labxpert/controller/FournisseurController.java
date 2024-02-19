@@ -16,6 +16,7 @@ import java.util.NoSuchElementException;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/fournisseurs")
+@CrossOrigin("*")
 public class FournisseurController {
 
     private final IFournisseurService iFournisseurService;

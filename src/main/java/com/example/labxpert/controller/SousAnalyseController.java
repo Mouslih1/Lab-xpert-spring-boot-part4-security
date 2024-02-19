@@ -16,6 +16,7 @@ import java.util.NoSuchElementException;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/sous-analyses")
+@CrossOrigin("*")
 public class SousAnalyseController {
 
     private final ISousAnalyseService iSousAnalyseService;

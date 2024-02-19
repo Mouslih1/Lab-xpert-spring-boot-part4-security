@@ -16,6 +16,7 @@ import java.util.NoSuchElementException;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/echontillons")
+@CrossOrigin("*")
 public class EchantillonController {
 
     private final IEchontillonService iEchontillonService;
@@ -44,7 +45,7 @@ public class EchantillonController {
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasAnyAuthority('Admin', 'Technicien', 'Responsable')")
+    @PreAuthorize("hasAnyAuthority('Technicien', 'Responsable')")
     public ResponseEntity<EchontillonDto> getById(@PathVariable Long id)
     {
         try{
@@ -57,7 +58,7 @@ public class EchantillonController {
     }
 
     @DeleteMapping("/{id}/delete")
-    @PreAuthorize("hasAnyAuthority('Admin', 'Responsable')")
+    @PreAuthorize("hasAnyAuthority('Responsable')")
     public ResponseEntity<MessageError> delete(@PathVariable Long id)
     {
         MessageError messageError = new MessageError("Echontillon deleted successfully.");
