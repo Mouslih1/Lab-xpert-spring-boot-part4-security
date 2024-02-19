@@ -39,13 +39,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception
     {
-        http.cors().and().csrf().disable();
+        http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
         http.authorizeHttpRequests().anyRequest().authenticated();
         http.addFilter(new JWTAuthenticationFilter(authenticationManager(http.getSharedObject(AuthenticationConfiguration.class)) ,jwtHelper));
         http.addFilterBefore(new JWTAuthorizationFilter(jwtHelper) , UsernamePasswordAuthenticationFilter.class);
-        http.oauth2Login(Customizer.withDefaults());
-        // http.formLogin(Customizer.withDefaults());
+        // http.oauth2Login(Customizer.withDefaults());
+        //http.formLogin(Customizer.withDefaults());
         return http.build();
     }
 
